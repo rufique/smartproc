@@ -3,9 +3,11 @@
     "name": "smartproc",
     "slug": "smartproc",
     "version": "1.0.0",
-
     "scheme": "smartproc",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -19,20 +21,29 @@
           "image": "./assets/splash.png",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-sharing",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "SmartProc uses your photos to scan supplier price lists.",
+          "cameraPermission": "SmartProc uses the camera to scan supplier price lists."
+        }
+      ],
+      "expo-font",
+      "expo-status-bar",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
-
       "tsconfigPaths": true
     },
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -40,6 +51,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.rufique.smartproc"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6c3c0933-158f-4754-94bc-00cb8a1cf5b1"
       }
     }
   }
